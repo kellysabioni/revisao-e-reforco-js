@@ -13,7 +13,7 @@ exemplo1(); // chamada da função
 
 
 function separador(){
-    console.log("\n********************************\n");
+    console.log("\n********************************************\n");
 }
 
 separador();
@@ -50,12 +50,12 @@ function exercicio01(valor1, valor2) {
     return resultado;
 }
 
-var conta01 = exercicio01(112 , 50);
-var conta02 = exercicio01(30 , 56);
+let conta01 = exercicio01(112 , 50);
+let conta02 = exercicio01(30 , 56);
 
 console.log(`Usando função nomeada`)
-console.log(` Resultado da conta, exemplo 01 é igual ${conta01}`);
-console.log(` Resultado da conta, exemplo 02 é igual ${conta02}`);
+console.log(`  Resultado da conta, exemplo 01 é igual ${conta01}`);
+console.log(`  Resultado da conta, exemplo 02 é igual ${conta02}`);
 
 separador();
 
@@ -64,11 +64,11 @@ const exercicio02 = function ( valor1, valor2 ){
     return valor1 - valor2;
 };
 
-var conta03 = exercicio02(100, 25);
-var conta04 = exercicio02(15, 45);
+let conta03 = exercicio02(100, 25);
+let conta04 = exercicio02(15, 45);
 
 console.log(`Usando função anônima`)
-console.log(` Resultado da conta, exemplo 03 é igual ${conta03}`);
-console.log(` Resultado da conta, exemplo 04 é igual ${conta04}`);
+console.log(`  Resultado da conta, exemplo 03 é igual ${conta03}`);
+console.log(`  Resultado da conta, exemplo 04 é igual ${conta04}`);
 
 separador();
