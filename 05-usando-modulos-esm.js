@@ -8,6 +8,8 @@ import { saudacao, clientes, separador } from './modulos-esm/exemplos.js';
 // Uso de um 'alias/apelido' para evitar conflito de nomes
 import { pessoa, livro, alunos as personagens } from "./modulos-esm/dados.js";
 
+import { converterMaiuscula, converterMinuscula, formatarReal  } from './modulos-esm/funcoes.js';  
+
 saudacao("Fulano de tal");
 console.log(clientes);
 
@@ -38,3 +40,7 @@ separador();
 3) Exporte-as como módulos
 4) No arquivo 05, importe e utilize etas funções passando textos e valores para testes.
 */
+
+console.log(converterMaiuscula ("kelly"));
+console.log(converterMinuscula ("SÃO PAULO"));
+console.log(formatarReal (456874.25));
