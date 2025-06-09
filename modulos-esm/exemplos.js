@@ -8,4 +8,8 @@ function saudacao(nome) {
 
 const clientes = ['Maycon', 'Gabriel', 'Júlia'];
 
-export { saudacao, clientes };
+function separador() {
+  console.log("\n********************************************\n");
+}
+
+export { saudacao, clientes , separador };
