@@ -12,7 +12,7 @@
 
 Existem duas formas de uso:
 
-- Módulos CJS: mecanismo mais antigo, usa `module.exports` e `require` assosiado à uma constante.
+- Módulos CJS: mecanismo mais antigo, usa `module.exports` e `require` assosiado à uma constante.'
 - Módulos ESM: mecanismo atual, usa `export` e `import`.
 
 **Obs.:** recomendável criar na raiz `package.json` contendo: 
