@@ -1,14 +1,18 @@
-'use strict';
+"use strict";
 
 // Importação de múltiplos recursos/módulos usando ESM
-import alunos from './modulos-esm/alunos.js'
+import alunos from "./modulos-esm/alunos.js";
 
-import { saudacao, clientes, separador } from './modulos-esm/exemplos.js';
+import { saudacao, clientes, separador } from "./modulos-esm/exemplos.js";
 
 // Uso de um 'alias/apelido' para evitar conflito de nomes
 import { pessoa, livro, alunos as personagens } from "./modulos-esm/dados.js";
 
-import { converterMaiuscula, converterMinuscula, formatarReal  } from './modulos-esm/funcoes.js';  
+import {
+  converterMaiuscula,
+  converterMinuscula,
+  formatarReal,
+} from "./modulos-esm/funcoes.js";
 
 saudacao("Fulano de tal");
 console.log(clientes);
@@ -18,7 +22,7 @@ console.log(alunos[1]);
 console.log(alunos);
 
 for (const aluno of alunos) {
-    console.log(aluno);
+  console.log(aluno);
 }
 
 separador();
@@ -41,6 +45,6 @@ separador();
 4) No arquivo 05, importe e utilize etas funções passando textos e valores para testes.
 */
 
-console.log(converterMaiuscula ("kelly"));
-console.log(converterMinuscula ("SÃO PAULO"));
-console.log(formatarReal (456874.25));
+console.log(converterMaiuscula("kelly"));
+console.log(converterMinuscula("SÃO PAULO"));
+console.log(formatarReal(456874.25));
