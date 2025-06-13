@@ -15,6 +15,8 @@ const vendasQueBateramMeta = vendas.filter((venda) => venda >= META);
 
 console.log(vendasQueBateramMeta);
 
+separador();
+
 /* Se fosse fazer sem filter... */
 // const bateramMeta = [];
 // for (const venda of vendas) {
@@ -34,6 +36,13 @@ const servicos = [
 ]
 
 /* Faça o exercício */
-const servicosPendentes = servicos.filter((servico) => servico.status === "Pendente");
+// Forma Simplificada
+// const servicosPendentes = servicos.filter((servico) => servico.status === "Pendente");
+
+// Forma desestruturada
+const servicosPendentes = servicos.filter(({status}) => status === "Pendente");
 
 console.log(servicosPendentes);
+
+separador();
+
