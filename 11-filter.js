@@ -71,11 +71,28 @@ Gere um array com os cursos que atendam os seguintes critérios:
 ("Exercicio");
 
 const cursosFrontMobile = cursos.filter(
-    (curso) =>
-    (curso.categoria === "Front-End" || curso.categoria === "Mobile") 
-    &&
+  (curso) =>
+    (curso.categoria === "Front-End" || curso.categoria === "Mobile") &&
     curso.preco > 600
 );
-
-console.log("Quantidade de cursos: " +cursosFrontMobile.length);
+console.log("Quantidade de cursos: " + cursosFrontMobile.length);
 console.log(cursosFrontMobile);
+
+separador();
+
+/* Desafio
+Gerar um novo array com os cursos da categorai Back-End e COM O PREÇO atualizado com 10% de desconto. Para essa atividade você deverá combinar filter com map. */
+/* const cursosBackEnd = cursos.filter((curso) => curso.categoria === "Back-End").map((curso) => {
+  return {  ...curso, // spread das propriedades do curso (copiando-as pra cá)
+            preco: curso.preco - curso.preco * 0.1, // mas o preco é atualizado
+  };
+});
+ */
+const cursosBackEnd = cursos
+  .filter((curso) => curso.categoria === "Back-End")
+  .map((curso) => {
+    return { ...curso, preco: curso.preco - curso.preco * 0.1 };
+  });
+
+console.log("*** DESAFIO - Qtde de cursos: " + cursosBackEnd.length);
+console.log(cursosBackEnd);
