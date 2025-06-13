@@ -28,21 +28,52 @@ separador();
 
 // Exemplo 2: filtrar serviços pendentes
 const servicos = [
-    {codigo: 1, tipo: "Limpeza" , status: "Concluído"},
-    {codigo: 2, tipo: "Manutenção" , status: "Pendente"},
-    {codigo: 3, tipo: "Reparo" , status: "Pendente"},
-    {codigo: 4, tipo: "Consultoria" , status: "Concluído"},
-    {codigo: 5, tipo: "Instalação" , status: "Concluído"},
-]
+  { codigo: 1, tipo: "Limpeza", status: "Concluído" },
+  { codigo: 2, tipo: "Manutenção", status: "Pendente" },
+  { codigo: 3, tipo: "Reparo", status: "Pendente" },
+  { codigo: 4, tipo: "Consultoria", status: "Concluído" },
+  { codigo: 5, tipo: "Instalação", status: "Concluído" },
+];
 
 /* Faça o exercício */
 // Forma Simplificada
 // const servicosPendentes = servicos.filter((servico) => servico.status === "Pendente");
 
 // Forma desestruturada
-const servicosPendentes = servicos.filter(({status}) => status === "Pendente");
+const servicosPendentes = servicos.filter(
+  ({ status }) => status === "Pendente"
+);
 
 console.log(servicosPendentes);
 
 separador();
 
+const cursosDesign = cursos.filter((curso) => curso.categoria === "Design");
+
+console.log(cursosDesign);
+
+separador();
+
+// Exemplo 4
+
+const cursosExcetoDesign = cursos.filter(
+  (curso) => curso.categoria !== "Design"
+);
+
+console.log(cursosExcetoDesign);
+
+separador();
+
+/* Exercício
+Gere um array com os cursos que atendam os seguintes critérios:
+- Categoria Front-End OU Mobile
+- Preços acima de 600 */
+("Exercicio");
+
+const cursosFrontMobile = cursos.filter(
+  (curso) =>
+    (curso.categoria === "Front-End" || curso.categoria === "Mobile") &&
+    curso.preco > 600
+);
+
+console.log(cursosFrontMobile);
