@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando módulos JS em páginas HTML</title>
+</head>
+<body>
+    <h1>Acessando módulos</h1>
+    <hr>
+    <ul id="lista-alunos"></ul>
+
+    <script type="module">
+        'use strict';
+        
+        import { alunos } from "./modulos-esm/dados.js";
+        
+        console.log(alunos);
+
+        /* Exercício de revisão
+        Programe aqui as instruções necessárias para fazer com que
+        os dados do array alunos, sejam inseridos como itens (tag <li>)
+        dentro da lista não-ordenada chamada lista-alunos.
+        
+        Dicas: 
+            - Use seleção de elemento no DOM
+            - Use loop para percorrer os elementos do array
+            - Crie a tag li dinamicamente com o JS
+            - Adicione o conteúdo do array dentro da tag li criada   
+            - Adicionar a tag li já com o conteúdo DENTRO da lista     
+        */
+
+        // Use seleção de elemento no DOM
+        const lista = document.querySelector("#lista-alunos");
+        
+        // Use loop para percorrer os elementos do array
+        for(const aluno of alunos){
+            // Criando um elemento <li>
+            let item = document.createElement("li");
+            
+            // Adicionando conteúdo ao elemento li criado
+            item.innerHTML = aluno;
+
+            // Inserir o elemento criado e com o nome do aluno na lista
+            lista.appendChild(item);
+        }
+        
+    </script>
+
+</body>
+</html>
