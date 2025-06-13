@@ -89,10 +89,8 @@ Gerar um novo array com os cursos da categorai Back-End e COM O PREÇO atualizad
 });
  */
 const cursosBackEnd = cursos
-  .filter((curso) => curso.categoria === "Back-End")
-  .map((curso) => {
-    return { ...curso, preco: curso.preco - curso.preco * 0.1 };
-  });
+  .filter(({ categoria }) => categoria === "Back-End")
+  .map((curso) => ({ ...curso, preco: curso.preco - curso.preco * 0.1 }));
 
-console.log("*** DESAFIO - Qtde de cursos: " + cursosBackEnd.length);
+console.log("*** DESAFIO *** - Qtde de cursos: " + cursosBackEnd.length);
 console.log(cursosBackEnd);
