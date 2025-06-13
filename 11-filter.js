@@ -71,9 +71,11 @@ Gere um array com os cursos que atendam os seguintes critérios:
 ("Exercicio");
 
 const cursosFrontMobile = cursos.filter(
-  (curso) =>
-    (curso.categoria === "Front-End" || curso.categoria === "Mobile") &&
+    (curso) =>
+    (curso.categoria === "Front-End" || curso.categoria === "Mobile") 
+    &&
     curso.preco > 600
 );
 
+console.log("Quantidade de cursos: " +cursosFrontMobile.length);
 console.log(cursosFrontMobile);
