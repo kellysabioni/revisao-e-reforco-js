@@ -11,8 +11,6 @@ A função callback recebe dois parâmetros: o acumulador (valor que é acumulad
 // Exemplo 1
 
 const valores = [10, 5, 50 , 200, 1000];
-const total = valores.reduce((acumulador, valor) => {
-    return acumulador + valor
-}, 0 );
+const total = valores.reduce((acumulador, valor) => acumulador + valor, 0 );
 
 console.log(total);
