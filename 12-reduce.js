@@ -35,3 +35,6 @@ console.log(`A soma total dos cursos de Front-End é de  ${formatarMoeda(precoTo
 
 separador();
 
+const teste = ["PHP", "HTML", "CSS"]
+
+const [php, ,css] = teste
